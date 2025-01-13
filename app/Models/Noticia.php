@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Noticia extends Model
 {
+    public function categoria(){
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
     /** @use HasFactory<\Database\Factories\NoticiaFactory> */
     use HasFactory;
 }

@@ -18,10 +18,11 @@
                     </div>
 
                     <div class="text-xs p-4">
-                        Publicado por: {{$noticia->user_id}}
+                        Publicado por: {{$noticia->user->name}}
                         Publicado el: {{$noticia->created_at->format('d-m-Y')}}
                     </div>
                         <p class="p-2">{{$noticia->contenido}}</p>
+                        <p class="p-2"> Categoria: {{$noticia->categoria->denominacion}}</p>
                     @endforeach
                 </div>
             </div>

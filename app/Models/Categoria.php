@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
+    public function noticias(){
+        return $this->hasMany(Noticia::class);
+    }
     /** @use HasFactory<\Database\Factories\CategoriaFactory> */
     use HasFactory;
 }
